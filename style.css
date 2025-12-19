@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+    background: radial-gradient(circle,rgb(245, 9, 249),rgb(154, 13, 255),rgb(0, 34, 255),rgb(7, 255, 255));
+    color: #2b2d42;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px,
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+    padding: 30px;
+
+    
+}
+
+
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    background: linear-gradient(to right, rgb(255, 2, 27), rgb(14, 66, 255), rgb(187, 0, 184));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 20px
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px
+}
+
+#taskInput {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all .3s
+}
+
+#taskInput:focus {
+    border-color: #4361ee;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, .1)
+}
+
+#addButton {
+    background: #4361ee;
+    color: #fff;
+    border: 0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s
+}
+
+#addButton:hover {
+    background: #3651d4;
+    transform: translateY(-2px)
+}
+
+#addButton i {
+    margin-right: 8px
+}
+
+.tasks-section {
+    margin-top: 20px
+}
+
+h2 {
+    color: #2b2d42;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 24px
+}
+
+h2 i {
+    color: #4361ee;
+    margin-right: 10px
+}
+
+#taskList {
+    list-style: none;
+    padding: 0
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 5px solid #4361ee;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .09);
+    transition: all .3s
+}
+
+.task-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+}
+
+.task-item.completed {
+    opacity: .7;
+    border-left-color: #38b000
+}
+
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #4361ee;
+    margin-right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s
+}
+
+
+.task-checkbox.checked {
+    background: #38b000;
+    border-color: #38b000;
+    color: white;
+}
+
+
+.task-text {
+    flex: 1;
+    margin-right: 15px;
+    font-size: 16px
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #8d99ae
+}
+
+.delete-btn {
+    background: transparent;
+    color: #e63946;
+    border:none;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s
+}
+
+.delete-btn:hover {
+    background: rgba(230, 57, 70, .1)
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #8d99ae
+}
+
+.empty-state i {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #8d99ae;
+    opacity: .5
+}
+
+.empty-state h3 {
+    font-size: 22px;
+    margin-bottom: 10px
+}
+
+.empty-state p {
+    font-size: 16px
+}
+
+.steps {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #8d99ae
+}
+
+.steps h3 {
+    color: #2b2d42;
+    margin-bottom: 10px;
+    font-size: 18px
+}
+
+.steps h3 i {
+    color: #4361ee;
+    margin-right: 10px
+}
+
+.steps ul {
+    padding-left: 20px
+}
+
+.steps li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px
+}
+
+.steps li i {
+    color: #38b000;
+    margin-right: 10px;
+    margin-top: 3px
+}
+
+/* responsive */
+@media(max-width:600px) {
+    .container {
+        padding: 20px;
+        margin: 10px auto
+    }
+
+    h1 {
+        font-size: 32px
+    }
+
+    .subtitle {
+        font-size: 16px
+    }
+
+    .input-section {
+        flex-direction: column
+    }
+
+    #addButton {
+        width: 100%
+        
+    }
+
+    h2 {
+        font-size: 20px
+    }
+
+    .steps h3 {
+        font-size: 16px
+    }
+
+    .steps li {
+        font-size: 14px
+    }
+}
